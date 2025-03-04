@@ -1,0 +1,40 @@
+-- Belirli Kolon Seçme
+-- SELECT komutu kullanılır.
+
+
+SELECT firstname, lastname, salary 
+FROM public.employees; 
+
+ 
+--DISTINCT Komutu ile Tekrarları Önleme
+-- Farklı değerleri ekrana getirir.
+
+ 
+ SELECT DISTINCT ON (departmentid) departmentid 
+ FROM public.employees 
+ ORDER BY departmentid; 
+
+ -- Belirli Departmana Ait Çalışanları Listeleme
+ -- WHERE komutu kullanırız. Departments tablosunda IT ID 1 olduğu için böyle kullanırız.
+
+ SELECT * 
+FROM public.employees 
+WHERE departmentid = 1; 
+
+ --Maaşa Göre Sıralama
+ --DESC komutu büyükten küçüğe sıralar. 
+
+SELECT * 
+FROM public.employees 
+ORDER BY salary DESC; 
+
+--Kolonları Birleştirme
+--CONCAT komutu kullanılır. 
+
+ SELECT CONCAT(firstname,'',lastname) AS full_name 
+ FROM public.employees;
+
+ 
+ 
+
+ 
